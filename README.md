@@ -28,6 +28,14 @@ This will enable request monitoring, unhandled exception tracking, and system pe
 import appInsights = require("applicationinsights");
 appInsights.setup("<instrumentation_key>").start();
 ```
+In your app.js/server.js file use
+```javascript
+var appInsights = require("applicationinsights")
+```
+instead of 
+```javascript
+import appInsights = require("applicationinsights")
+```
 
 >The instrumentation key can also be set in the environment variable APPINSIGHTS_INSTRUMENTATIONKEY. If this is done, no argument is required when calling `appInsights.setup()` or `appInsights.getClient()`.
 
